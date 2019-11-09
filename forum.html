@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PopCorn Movies</title>
+    <link rel="icon" href="./assets/images/favicon-16x16.png" type="" sizes="16x16">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" media="all" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/forum.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row header">
+                <div class="col-xs-12 m-0 col-sm-12 col-lg-6">
+                    <a href="index.html"><img src="./assets/images/logo.png" alt="main logo"></a>
+                </div>
+                <!-- <div class="col-xs-12 m-0 col-sm-12 col-lg-6 text-center">
+                    <nav class="main-nav">
+                        <ul class="nav">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        </ul>
+                    </nav> -->
+            </div>
+        </div>
+        </div>
+    </header>
+    <div class="content" data-cms-content-wrapper="/_layouts/default.html">
+        <div class="container">
+            <h2 class="spacing">Comments Section</h2>
+            <hr />
+            <div class="comments"></div>
+
+            <h3>Leave a comment</h3>
+            <form id="comment" class="pb-5">
+                <label>Message</label>
+                <textarea id="message"></textarea>
+
+                <label>Name</label>
+                <input type="text" id="name" />
+
+                <label>Email</label>
+                <input type="text" id="email" />
+
+                <input type="submit" value="Post Comment" />
+            </form>
+        </div>
+    </div>
+
+    </div>
+    <footer>
+        <div class="container">
+            <p class="center-text"> <a href="http://cloudcannon.com">&copy;copyright 2019 MAHM (Mohamed, Adnan, Huan &
+                    Mathew)</a></p>
+        </div>
+    </footer>
+    <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.1.0/js/md5.js"></script>
+    <script src="./js/blog.js"></script>
+</body>
+
+</html>

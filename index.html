@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="./assets/images/favicon-16x16.png" type="" sizes="16x16">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+    <title>Action Movies</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container-fluid">
+            <header class="row text-center text-lg-left">
+                <div class="col-xs-12 col-sm-12 col-lg-6 text-white p-3">
+                    <!-- <h1 class="logo display-4 fas fa-camera">PopCorn Movies</h1> -->
+                    <a href="index.html"><img class="img-fluid" src="./assets/images/logo.png" alt=""></a>
+                </div>
+
+                <div class="col-xs-12 m-0 col-sm-12 col-lg-6">
+                    <form class="search-form">
+                        <input type="text" class="form-control" id="searchbox" placeholder="enter your keywords">
+                    </form>
+                </div>
+            </header>
+        </div>
+
+        <!-- mainNav -->
+        <div class="container-fluid bg-dark pt-3" style="margin-bottom: -20px">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active text-light" href="index.html">Home</a>
+                </li>
+                <li class="outer-nav nav-item">
+                    <a class="nav-link text-light">Genre</a>
+                    <ul class="sub-nav">
+                        <div class="genre-top">Genre</div>
+                        <li><span class="genre-options" data="28">Action</span></li>
+                        <li><span class="genre-options" data="10749" name="Romance">Romance</span></li>
+                        <li><span class="genre-options" data="10402" name="Music">Music</span></li>
+                        <li><span class="genre-options" data="35" name="Comedy">Comedy</span></li>
+                        <li><span class="genre-options" data="9648" name="Mystery">Mystery</span></li>
+                        <li><span class="genre-options" data="18" name="Drama">Drama</span></li>
+                        <li><span class="genre-options" data="12" name="Adventure">Adventure</span></li>
+                        <li><span class="genre-options" data="878" name="Science Fiction">Sci-Fi</s></li>
+                        <li><span class="genre-options" data="10752" name="War">Adventure</span></li>
+                        <li><span class="genre-options" data="53" name="Thriller">Thriller</span></li>
+                        <li><span class="genre-options" data="10751" name="Family">Family</span></li>
+                        <li><span class="genre-options" data="99" name="Documentary">Documentary</span></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a id="about" class="text-light nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a id="" href="forum.html" class="text-light nav-link">Forum</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- slider -->
+        <div class="container-fluid p-0" id="slider">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="./assets/images/img1.jpg" alt="First slide">
+                        <div class="carousel-caption d-none d-sm-block movie-caption">
+                            <h5>Jumanji: Welcome to the Junlge (2017)</h5>
+                            <small class="text-warning">IMDB 6.9 Genre: Action, Adventure, Comedy</small>
+                            <p class="movie-detail">Four teenagers are sucked into a magical video game, and the only
+                                way they can escape is to work together to finish the game.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./assets/images/img2.jpg" alt="Second slide">
+                        <div class="carousel-caption d-none d-sm-block movie-caption">
+                            <h5>The Lion King (2019)</h5>
+                            <small class="text-warning">IMDB 7.0 Genre: Animation, Adventure, Drama</small>
+                            <p class="movie-detail">After the murder of his father, a young lion prince flees his
+                                kingdom only to learn the true meaning of responsibility and bravery.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./assets/images/img3.jpg" alt="Third slide">
+                        <div class="carousel-caption d-none d-sm-block movie-caption">
+                            <h5>Maleficent: Mistress of Evil (2019)</h5>
+                            <small class="text-warning">IMDB 7.0 Genre: Adventure, Family, Fantasy</small>
+                            <p class="movie-detail">Maleficent and her goddaughter Aurora begin to question the complex
+                                family ties that bind them as they are pulled in different directions by impending
+                                nuptials, unexpected allies, and dark new forces at play.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./assets/images/img4.jpg" alt="Third slide">
+                        <div class="carousel-caption d-none d-sm-block movie-caption">
+                            <h5>Frozen II (2019)</h5>
+                            <small class="text-warning">IMDB 7.8 Genre: Animation, Adventure, Comedy</small>
+                            <p class="movie-detail">Anna, Elsa, Kristoff, Olaf and Sven leave Arendelle to travel to an
+                                ancient, autumn-bound forest of an enchanted land. They set out to find the origin of
+                                Elsa's powers in order to save their kingdom.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./assets/images/img5.jpg" alt="Third slide">
+                        <div class="carousel-caption d-none d-sm-block movie-caption">
+                            <h5>Movie Name</h5>
+                            <small class="text-warning">IMDB 5.7 Genre: Comedy, Romance</small>
+                            <p class="movie-detail">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione sit
+                                veritatis, obcaecati
+                                exercitationem neque voluptatum voluptas incidunt quis fugit perspiciatis molestiae
+                                ullam ducimus cupiditate laudantium! Quos ullam totam minus nemo?</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./assets/images/img6.jpg" alt="Third slide">
+                        <div class="carousel-caption d-none d-sm-block movie-caption">
+                            <h5>Star Wars: The Rise of Skywalker (2019)</h5>
+                            <small class="text-warning">IMDB N/A Genre: Action, Adventure, Fantasy</small>
+                            <p class="movie-detail">The surviving Resistance faces the First Order once more in the
+                                final chapter of the Skywalker saga.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About page -->
+        <div id="about2-page"></div>
+
+        <!-- Login page -->
+
+        <div id="LoginIn-page"></div>
+
+        <!-- genre container -->
+        <div class="container genre-container">
+            <div class="row">
+                <div id="each-genre"></div>
+            </div>
+        </div>
+
+        <!-- main -->
+        <div id="posters-container">
+            <main class="container-fluid text-left">
+                <div class="row">
+                    <h3 class="cat-title">Now Playing</h3>
+                </div>
+                <div class="row images-container pt-3" id="playingNow">
+                </div>
+            </main>
+
+            <main class="container-fluid text-left">
+                <div class="row">
+                    <h3 class="cat-title">Upcoming Movies</h3>
+                </div>
+                <div class="row images-container" id="upcomingMovies">
+                </div>
+            </main>
+
+            <main class="container-fluid text-left">
+                <div class="row">
+                    <h3 class="cat-title">Top Rated Movies</h3>
+                </div>
+                <div class="row images-container pt-3" id="topRated">
+                </div>
+            </main>
+        </div>
+
+        <!-- movies search result by keywords -->
+        <div class="search-result"></div>
+
+        <!-- footer -->
+        <div class="container-fluid">
+            <footer class="row bg-dark p-5 text-light text-center">
+                <div class="col-12">&copy;copyright 2019 MAHM (Mohamed, Adnan, Huan & Mathew)</div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- external links -->
+    <script src=" https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"> </script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-database.js">
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/7.2.1/firebase-auth.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <!-- <script src="./assets/js/user-log.js"></script> -->
+</body>
+
+</html>
